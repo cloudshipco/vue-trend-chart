@@ -34,8 +34,7 @@
   "homepage": "https://dmtrbrl.github.io/vue-trend-chart/",
   "peerDependencies": {
     "dayjs": "^1.11.5",
-    "popper.js": "^1.16.1",
-    "vue": "^3.2.39"
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",

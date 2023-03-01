@@ -81,7 +81,9 @@ export default {
               "g",
               {
                 class: "label",
-                ...this.setXLabelsParams(i),
+                attrs: {
+                  ...this.setXLabelsParams(i),
+                }
               },
               [
                 h(
@@ -92,7 +94,7 @@ export default {
                   },
                   label
                 ),
-                h("line", { stroke: "rgba(0,0,0,0.1)", y2: 5 }),
+                h("line", { attrs: { stroke: "rgba(0,0,0,0.1)", y2: 5 }}),
               ]
             );
           })
@@ -109,26 +111,30 @@ export default {
             "g",
             {
               class: "label",
-              ...this.setYLabelsParams(i),
+              attrs: {
+                ...this.setYLabelsParams(i),
+              }
             },
             [
               h(
                 "text",
                 {
-                  dx: -10,
-                  dy: this.yLabelHeight / 4,
-                  "text-anchor": "end",
+                  attrs: {
+                    dx: -10,
+                    dy: this.yLabelHeight / 4,
+                    "text-anchor": "end",
+                  },
                 },
                 this.yLabelsTextFormatter(
                   this.minValue +
                     ((this.maxValue - this.minValue) / (this.yLabels - 1)) * i
                 )
               ),
-              h("line", {
+              h("line", {attrs: {
                 stroke: "rgba(0,0,0,0.1)",
                 x1: 0,
                 x2: -5,
-              }),
+              }}),
             ]
           )
         );

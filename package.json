@@ -1,8 +1,8 @@
 {
   "name": "@cloudshipco/vue-trend-chart",
   "productName": "Vue Trend Chart",
-  "version": "0.17.2",
-  "description": "Trend charts for Vue.js",
+  "version": "0.18.0",
+  "description": "Trend charts for Vue.js version 2.x",
   "main": "dist/vue-trend-chart.umd.js",
   "module": "dist/vue-trend-chart.mjs",
   "files": [

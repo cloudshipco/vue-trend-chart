@@ -70,8 +70,10 @@ export default {
       children.push(
         h("path", {
           class: "fill",
-          d: this.paths.fillPath,
-          fill: "rgba(0,0,0,0.15)",
+          attrs: {
+            d: this.paths.fillPath,
+            fill: "rgba(0,0,0,0.15)",
+          }
         })
       );
     }
@@ -80,9 +82,11 @@ export default {
       children.push(
         h("path", {
           class: "stroke",
-          d: this.paths.linePath,
-          fill: "none",
-          stroke: "black",
+          attrs: {
+            d: this.paths.linePath,
+            fill: "none",
+            stroke: "black",
+          }
         })
       );
     }
@@ -101,11 +105,13 @@ export default {
                 "is-active":
                   this.activeLineParams && this.activeLineParams.index === i,
               },
-              cx: point.x,
-              cy: point.y,
-              r: 2,
-              stroke: "#000000",
-              "stroke-width": 1,
+              attrs: {
+                cx: point.x,
+                cy: point.y,
+                r: 2,
+                stroke: "#000000",
+                "stroke-width": 1,
+              }
             })
           )
         )

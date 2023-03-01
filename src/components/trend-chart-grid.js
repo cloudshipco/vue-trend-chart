@@ -72,7 +72,9 @@ export default {
         lines.push(
           h("line", {
             class: "line",
-            ...this.setVerticalLinesParams(i),
+            attrs: {
+              ...this.setVerticalLinesParams(i),
+            }
           })
         );
       }
@@ -93,7 +95,9 @@ export default {
         lines.push(
           h("line", {
             class: "line",
-            ...this.setHorizontalLinesParams(i),
+            attrs: {
+              ...this.setHorizontalLinesParams(i),
+            }
           })
         );
       }

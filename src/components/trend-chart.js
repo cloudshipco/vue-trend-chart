@@ -227,15 +227,17 @@ export default {
       children.push(
         h(TrendChartGrid, {
           class: "grid",
-          verticalLines: this.grid.verticalLines,
-          verticalLinesNumber:
-            this.grid.verticalLinesNumber || this.params.maxAmount,
-          horizontalLines: this.grid.horizontalLines,
-          horizontalLinesNumber:
-            this.grid.horizontalLinesNumber ||
-            (this.labels && this.labels.yLabels) ||
-            0,
-          boundary: this.boundary,
+          attrs: {
+            verticalLines: this.grid.verticalLines,
+            verticalLinesNumber:
+              this.grid.verticalLinesNumber || this.params.maxAmount,
+            horizontalLines: this.grid.horizontalLines,
+            horizontalLinesNumber:
+              this.grid.horizontalLinesNumber ||
+              (this.labels && this.labels.yLabels) ||
+              0,
+            boundary: this.boundary,
+          }
         })
       );
     }
@@ -246,12 +248,14 @@ export default {
         h("line", {
           class: "active-line",
           ref: "active-line",
-          x1: this.activeLine || this.boundary.minX,
-          x2: this.activeLine || this.boundary.minX,
-          y1: this.boundary.minY,
-          y2: this.boundary.maxY,
-          stroke: "black",
-          visibility: this.activeLine ? "visible" : "hidden",
+          attrs: {
+            x1: this.activeLine || this.boundary.minX,
+            x2: this.activeLine || this.boundary.minX,
+            y1: this.boundary.minY,
+            y2: this.boundary.maxY,
+            stroke: "black",
+            visibility: this.activeLine ? "visible" : "hidden",
+          }
         })
       );
     }
@@ -262,10 +266,12 @@ export default {
         h(TrendChartLabels, {
           class: "labels",
           ref: "labels",
-          ...this.labels,
-          boundary: this.boundary,
-          minValue: this.params.minValue,
-          maxValue: this.params.maxValue,
+          attrs: {
+            ...this.labels,
+            boundary: this.boundary,
+            minValue: this.params.minValue,
+            maxValue: this.params.maxValue,
+          }
         })
       );
     }
@@ -274,12 +280,14 @@ export default {
     this.datasets.map((dataset) => {
       const vnode = h(TrendChartCurve, {
           class: "curve",
-          ...dataset,
-          boundary: this.boundary,
-          minValue: this.params.minValue,
-          maxValue: this.params.maxValue,
-          maxAmount: this.params.maxAmount,
-          activeLineParams: this.activeLineParams,
+          attrs: {
+            ...dataset,
+            boundary: this.boundary,
+            minValue: this.params.minValue,
+            maxValue: this.params.maxValue,
+            maxAmount: this.params.maxAmount,
+            activeLineParams: this.activeLineParams,
+          }
         });
 
       children.push(vnode);
@@ -290,9 +298,13 @@ export default {
       children.push(
         h("rect", {
           ref: "interactive-area",
-          ...this.chartOverlayParams,
-          onmousemove: (e) => this.mouseMove(e),
-          onmouseout: () => this.mouseOut(),
+          attrs: {
+            ...this.chartOverlayParams,
+          },
+          on: {
+            mousemove: (e) => this.mouseMove(e),
+            mouseout: () => this.mouseOut(),
+          }
         })
       );
     }

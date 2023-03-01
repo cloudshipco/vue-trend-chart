@@ -27,7 +27,9 @@
     "sparkline"
   ],
   "author": "dmtrbrl <dmytro.barylo@gmail.com> (https://github.com/dmtrbrl)",
-  "contributors": ["James Pickard <james.pickard@gmail.com> (https://github.com/euoia)"],
+  "contributors": [
+    "James Pickard <james.pickard@gmail.com> (https://github.com/euoia)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cloudshipco/vue-trend-chart/issues"
@@ -39,7 +41,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
+    "axios": "^1.3.4",
     "gh-pages": "^4.0.0",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vue-axios": "^3.5.2"
   }
 }

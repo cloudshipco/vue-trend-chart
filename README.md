@@ -12,6 +12,12 @@
   <a href="https://dmtrbrl.github.io/vue-trend-chart/">Live Demo</a>
 </div>
 
+## :fire: A fork of dmtrbrl/vue-trend-chart
+
+This is a fork of dmtrbrl/vue-trend-chart that restores Vue 2.x compatibility.
+
+Ultimately, this library should support Vue 2 and Vue 2.
+
 ## :cd: Installation
 
 ```shell

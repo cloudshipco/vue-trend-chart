@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmtrbrl/vue-trend-chart.git"
+    "url": "git+https://github.com/cloudshipco/vue-trend-chart.git"
   },
   "keywords": [
     "vue",
@@ -27,11 +27,12 @@
     "sparkline"
   ],
   "author": "dmtrbrl <dmytro.barylo@gmail.com> (https://github.com/dmtrbrl)",
+  "contributors": ["James Pickard <james.pickard@gmail.com> (https://github.com/euoia)"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dmtrbrl/vue-trend-chart/issues"
+    "url": "https://github.com/cloudshipco/vue-trend-chart/issues"
   },
-  "homepage": "https://dmtrbrl.github.io/vue-trend-chart/",
+  "homepage": "https://cloudshipco.github.io/vue-trend-chart/",
   "peerDependencies": {
     "dayjs": "^1.11.5",
     "popper.js": "^1.16.1"

@@ -1,11 +1,11 @@
 import { h, nextTick } from "vue";
 
-import validatePadding from "../helpers/validatePadding";
-import getPadding from "../helpers/getPadding";
+import validatePadding from "../helpers/validatePadding.js";
+import getPadding from "../helpers/getPadding.js";
 
-import TrendChartGrid from "./trend-chart-grid";
-import TrendChartLabels from "./trend-chart-labels";
-import TrendChartCurve from "./trend-chart-curve";
+import TrendChartGrid from "./trend-chart-grid.js";
+import TrendChartLabels from "./trend-chart-labels.js";
+import TrendChartCurve from "./trend-chart-curve.js";
 
 export default {
   name: "TrendChart",
@@ -272,8 +272,7 @@ export default {
 
     // Curves
     this.datasets.map((dataset) => {
-      children.push(
-        h(TrendChartCurve, {
+      const vnode = h(TrendChartCurve, {
           class: "curve",
           ...dataset,
           boundary: this.boundary,
@@ -281,8 +280,9 @@ export default {
           maxValue: this.params.maxValue,
           maxAmount: this.params.maxAmount,
           activeLineParams: this.activeLineParams,
-        })
-      );
+        });
+
+      children.push(vnode);
     });
 
     // Chart overlay

@@ -1,7 +1,7 @@
 import { h } from "vue";
 
-import genPoints from "../helpers/genPoints";
-import genPath from "../helpers/genPath";
+import genPoints from "../helpers/genPoints.js";
+import genPath from "../helpers/genPath.js";
 
 export default {
   name: "TrendChartCurve",
